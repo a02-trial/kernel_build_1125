@@ -7,7 +7,7 @@ jobs:
   Build-Kernel:
     strategy:
       fail-fast: false
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: read
 
@@ -15,16 +15,16 @@ jobs:
       - name: Build Kernel
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/AcmeUI-Devices/android_kernel_xiaomi_cas
-          kernel-dir: msm-4.19
-          kernel-branch: taffy
-          config: cas_defconfig
-          arch: arm64
+          kernel-url: https://github.com/a02-trial/a022f_kernel
+          kernel-dir: kernel-4.14
+          kernel-branch: main
+          config: a02_defconfig
+          arch: arm
           aosp-gcc: true
-          aosp-clang: true
+          aosp-clang: false
           ksu: true
           ksu-version: main
-          android-version: 12
-          aosp-clang-version: r383902
+          android-version: 11.0.0_r3
+          aosp-clang-version: r377782c
           disable-lto: true
           anykernel3: true
