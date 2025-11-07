@@ -15,9 +15,9 @@ jobs:
       - name: Build Kernel
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/a02-trial/a022f_kernel
-          kernel-branch: main
-          config: build.config.mt6739
+          kernel-url: https://android.googlesource.com/kernel/hikey-linaro
+          kernel-branch: mirror-android-4.14-r
+          config: ranchu_defconfig
           arch: arm
           aosp-gcc: true
           aosp-clang: true
