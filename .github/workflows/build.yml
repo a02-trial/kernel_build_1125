@@ -15,8 +15,13 @@ jobs:
       - name: Build Kernel
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://android.googlesource.com/kernel/hikey-linaro
-          kernel-branch: mirror-android-4.14-r
-          config: ranchu_defconfig
+          kernel-url: https://github.com/a02-trial/kernel_samsung_a02
+          kernel-dir: common
+          kernel-branch: Android-Q
+          config: a02_defconfig
           arch: arm
           aosp-gcc: true
+          aosp-clang: true
+          android-version: 10
+          disable-lto: true
+          anykernel3: true
