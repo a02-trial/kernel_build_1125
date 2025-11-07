@@ -17,7 +17,7 @@ jobs:
         with:
           kernel-url: https://github.com/a02-trial/a022f_kernel
           kernel-branch: main
-          config: a02_defconfig
+          config: build.config.mt6739
           arch: arm
           aosp-gcc: true
           aosp-clang: true
