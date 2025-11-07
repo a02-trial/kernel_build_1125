@@ -20,5 +20,5 @@ jobs:
           config: ranchu_defconfig
           arch: arm
           aosp-gcc: true
-          aosp-clang: true
+          aosp-clang: false
           android-version: 11
