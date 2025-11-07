@@ -34,7 +34,7 @@ jobs:
           config: a02_defconfig
           arch: arm
           aosp-gcc: true
-          aosp-clang: true
+          aosp-clang: false
           android-version: 11
           aosp-clang-version: r383902
           disable-lto: true
