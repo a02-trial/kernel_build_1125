@@ -9,19 +9,19 @@ jobs:
       fail-fast: false
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
 
     steps:
       - name: Build Kernel
         uses: dabao1955/kernel_build_action@main
         with:
-          kernel-url: https://github.com/a02-trial/kernel_samsung_a02
-          kernel-dir: common
-          kernel-branch: Android-Q
+          kernel-url: https://github.com/a02-trial/a022f_kernel
+          kernel-dir: kernel-4.14
+          kernel-branch: main
           config: a02_defconfig
           arch: arm
           aosp-gcc: true
-          aosp-clang: true
-          android-version: 10
+          aosp-clang: false
+          android-version: 11
           disable-lto: true
           anykernel3: true
